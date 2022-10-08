@@ -9,6 +9,7 @@ namespace Simple_factorial
         {
             while (true)
             {
+                int x = int.Parse(Console.ReadLine());
                 static BigInteger SimpleFactorial(int x)
                 {
                     var factorial = new BigInteger(1);
@@ -24,7 +25,8 @@ namespace Simple_factorial
                     if (x == 1) return 1;
                     return x * FactorialByRec(x - 1);
                 }
-                
+                BigInteger factorial = FactorialByRec(x);
+                Console.WriteLine($"Факториал {x} = {factorial}");
             }
            
         }
